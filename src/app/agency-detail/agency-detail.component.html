@@ -1,0 +1,27 @@
+<div class="agencies-detail-header">
+    <div class="agencies-detail-header-content">
+        <a routerLink="/agencies"><img class="agencies-detail-back-icon" src="assets/back.png" alt="Volver"></a>
+        <h2>Actualizar datos</h2>
+    </div>
+    
+</div>
+
+<div>
+    <form (submit)="updateAgency(agencia,distrito,provincia,departamento,direccion,latitud,longitud)">
+        <label>Nombre de Agencia</label>
+        <input type="text" value="{{agencyDetail.agencia}}" disabled #agencia>
+        <label>Distrito</label>
+        <input type="text" value="{{agencyDetail.distrito}}" #distrito>
+        <label>Provincia</label>
+        <input type="text" value="{{agencyDetail.provincia}}" #provincia>
+        <label>Departamento</label>
+        <input type="text" value="{{agencyDetail.departamento}}" #departamento>
+        <label>Dirección</label>
+        <input type="text" value="{{agencyDetail.direccion}}" #direccion>
+        <label>Latitud</label>
+        <input type="text" value="{{agencyDetail.lat}}" #latitud>
+        <label>Longitud</label>
+        <input type="text" value="{{agencyDetail.lon}}" #longitud>
+        <button type="submit">Guardar</button>
+    </form>
+</div>

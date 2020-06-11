@@ -1,0 +1,16 @@
+<div class="agencies-header">
+    <h2>Agencias BCP</h2>
+    <a class="agencies-location-button" href="/"><img src="assets/location-icon.png" alt="Map"></a>
+</div>
+
+<ul>
+    <li>
+        <bcp-agency *ngFor="let agency of agencyList" [agency]="agency"></bcp-agency>
+    </li>
+</ul>
+
+
+<div *ngIf="selectedAgency">
+
+  <h2>{{selectedAgency.agencia | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedAgency.agencia}}</div>
